@@ -3,6 +3,7 @@
 * make our logo
 * add various pics
 * add construction examples for work2
+* add sitemap.xml
 
 
 ## memo
