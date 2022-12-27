@@ -1,10 +1,11 @@
- * to do
-make our logo
-add various pics
-add construction examples for work2
+* to do
+ - make our logo
+ - add various pics
+ - add construction examples for work2
 
 
- * memo
+* memo
+
 re-publish
 
 repository
