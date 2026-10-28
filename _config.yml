@@ -1,2 +1,29 @@
 plugins:
   - jekyll-sitemap
+
+# Jekyll の既定除外に加え、公開しない下書き・動かないフォームを外す。
+# ファイル自体はリポジトリに残す。GitHub の README 表示には影響しない。
+exclude:
+  - .sass-cache
+  - .jekyll-cache
+  - gemfiles
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - form.html
+  - confirm.html
+  - finish.html
+  - form.php
+  - d_contact.html
+  - works/works2.html
+
+defaults:
+  - scope:
+      path: "google421b7cae58fe3ffa.html"
+    values:
+      sitemap: false
