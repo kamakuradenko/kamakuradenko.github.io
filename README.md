@@ -10,7 +10,7 @@
 - `works/LowV.html` 低圧電気設備工事
 - `works/HighV.html` 高圧受電設備工事
 - `works/LED.html` LED更新工事
-- `recruit.html` 採用情報（文面は 2024年2月のまま。差し替え原稿待ち）
+- `recruit.html` 採用情報（右肩上がり・二班増の記述は削除済み。残りの文面は原稿待ち）
 
 問い合わせはメニューの mailto（`kd231123@gmail.com`）。GitHub Pages では PHP は動かない。
 
