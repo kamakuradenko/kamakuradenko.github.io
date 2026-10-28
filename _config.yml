@@ -1,8 +1,8 @@
 plugins:
   - jekyll-sitemap
 
-# Jekyll の既定除外に加え、公開しない下書き・動かないフォームを外す。
-# ファイル自体はリポジトリに残す。GitHub の README 表示には影響しない。
+# Jekyll の既定除外。これに加え、サイトへ出したくない画像を外す。
+# 画像ファイル自体はリポジトリに残す。README は GitHub 上の説明用で、サイトには出さない。
 exclude:
   - .sass-cache
   - .jekyll-cache
@@ -15,12 +15,28 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - README.md
-  - form.html
-  - confirm.html
-  - finish.html
-  - form.php
-  - d_contact.html
-  - works/works2.html
+  - images/icon_facebook.png
+  - images/icon_instagram.png
+  - images/icon_twitter.png
+  - images/icon_youtube.png
+  - images/sample1.jpg
+  - images/sample1_big.jpg
+  - images/sample2.jpg
+  - images/sample3.jpg
+  - images/_1.jpg
+  - images/_2.jpg
+  - images/_3.jpg
+  - images/logo_.png
+  - images/logo__.png
+  - images/seko/583043.jpg
+  - images/seko/583044.jpg
+  - images/seko/583045.jpg
+  - images/seko/583046.jpg
+  - images/seko/583047.jpg
+  - images/seko/583048.jpg
+  - images/seko/583049.jpg
+  - images/seko/583050.jpg
+  - images/seko/バッテリー修理
 
 defaults:
   - scope:

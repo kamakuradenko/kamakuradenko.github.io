@@ -4,46 +4,54 @@
 
 ## 公開しているページ
 
-- `index.html` トップ（更新履歴とスライド）
+- `index.html` トップ（事業案内、更新履歴、スライド）
 - `company.html` 会社概要
 - `works.html` 施工例
 - `works/LowV.html` 低圧電気設備工事
 - `works/HighV.html` 高圧受電設備工事
 - `works/LED.html` LED更新工事
-- `recruit.html` 採用情報
-- `link.html` リンク（メニューには出していない）
+- `recruit.html` 採用情報（文面は 2024年2月のまま。差し替え原稿待ち）
+- `link.html` リンク（メニューには出していない。公開は継続）
 
 問い合わせはメニューの mailto（`kd231123@gmail.com`）。GitHub Pages では PHP は動かない。
 
-## リポジトリに残しているが公開しない
+## リポジトリから削除したもの
 
-`_config.yml` の `exclude` に入れてある。ファイルは削除していない。
+動かないフォームと、本文が「工事中」だったページ。
 
-- `form.html` `confirm.html` `finish.html` `form.php`（自動フォーム。送信処理は動かない）
-- `d_contact.html`（テンプレートの見本ページ）
-- `works/works2.html`（本文が「工事中」）
+- `form.html` `confirm.html` `finish.html` `form.php`
+- `d_contact.html`（テンプレートの見本）
+- `works/works2.html`
 
-`/sitemap.xml` は `jekyll-sitemap` がビルド時に作る。手書きの `sitemap.xml` は置かない。Search Console 用の `google421b7cae58fe3ffa.html` は公開したまま、サイトマップからは外している。
+## ビルドから外している画像
 
-## 済んでいること
+ファイルは残している。バッテリー事業の写真と、テンプレート由来の未使用画像。
 
-- ロゴは `images/logo.png`（回路模様と社名）を公開中。下書き `logo_.png` `logo__.png` は未使用のまま残る
-- 会社概要から、取り消し線だった旧携帯・旧バッテリー工場・バッテリーの販売と買取の文を外した
-- 各ページのロゴ alt を「カマクラ電工」にそろえた（見本ページ `d_contact.html` を除く）
-- 会社概要・施工例・採用で、開いているページにメニューの現在位置が付くようにした
-- LED 詳細のキャプションを写真に合わせた
+- `images/seko/583043.jpg` から `583050.jpg`（蓄電池・リフト・高所作業車の蓄電池）
+- `images/seko/バッテリー修理/`
+- `images/sample1.jpg` などテンプレート画像、`images/_1.jpg` など旧スライド、`images/logo_.png` `images/logo__.png`
+- SNS 用アイコン（ページからは外した）
 
-## 残作業（事実の確認が必要）
+電気工事の写真 `images/seko/583052.jpg` `583053.jpg` `583054.jpg` と `images/seko/低圧電気設備工事/計器傾斜改修後.JPG` はページ未使用のまま残している。
 
-- バッテリーは「撤退予定」の一文と、施工例ページの写真が残っている。撤退済みか、継続か
-- 採用文面は 2024年2月のまま。募集を続けるなら数字と体制、止めるならページを閉じる
-- 売上高・従業員数が今の数字か
+## 写真の容量
+
+JPEG は長辺 1600px、品質 80 で保存し直した。`images` 配下は約 116MB から約 9MB。再保存に伴い、撮影位置などのExifは残らない。
+
+## いまの文面で確認済みのこと
+
+- バッテリー事業は撤退済み。会社概要は「撤退しました」。施工例からは外した
+- トップの案内は、所在地・電気設備工事・電話・FAX・メール。売上高と従業員数は会社概要の表記のまま
+- SNS アイコンは外した
+- 採用は募集継続。本文は原稿が届いてから差し替える
+
+## 残っている確認
+
 - What's New の「2023/12/-- 代表取締役交代」の日付
-- SNS アイコンはリンク先が `#` のまま。アカウントが無ければ外す
-- `link.html` を残すか、公開から外すか
-- 施工写真が重い（`images` 配下 約116MB、1枚数MB）。圧縮してよいか
-- トップに事業・所在地・連絡先の説明がまだない
+- 売上高 100,000,000円、従業員数 5名が今の数字か
 
 ## 更新の出し方
 
 通常は `master` へ push する。ビルドだけやり直すときは GitHub の Actions で「Page build and deployment」を開き、右上の Re-run all jobs を押す。
+
+`/sitemap.xml` は `jekyll-sitemap` がビルド時に作る。手書きの `sitemap.xml` は置かない。Search Console 用の `google421b7cae58fe3ffa.html` は公開したまま、サイトマップからは外している。
