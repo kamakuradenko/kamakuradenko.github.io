@@ -11,7 +11,6 @@
 - `works/HighV.html` 高圧受電設備工事
 - `works/LED.html` LED更新工事
 - `recruit.html` 採用情報（文面は 2024年2月のまま。差し替え原稿待ち）
-- `link.html` リンク（メニューには出していない。公開は継続）
 
 問い合わせはメニューの mailto（`kd231123@gmail.com`）。GitHub Pages では PHP は動かない。
 
@@ -22,6 +21,7 @@
 - `form.html` `confirm.html` `finish.html` `form.php`
 - `d_contact.html`（テンプレートの見本）
 - `works/works2.html`
+- `link.html`（リンク集。メニューからも外していた）
 
 ## ビルドから外している画像
 
