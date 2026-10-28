@@ -1,8 +1,9 @@
 plugins:
   - jekyll-sitemap
 
-# Jekyll の既定除外。これに加え、サイトへ出したくない画像を外す。
-# 画像ファイル自体はリポジトリに残す。README は GitHub 上の説明用で、サイトには出さない。
+# Jekyll の既定除外。これに加え、サイトへ出したくない画像と、
+# リニューアル前のテンプレートの残り（どのページからも使っていない CSS・JS・画像）を外す。
+# ファイル自体はリポジトリに残す。README は GitHub 上の説明用で、サイトには出さない。
 exclude:
   - .sass-cache
   - .jekyll-cache
@@ -37,9 +38,22 @@ exclude:
   - images/seko/583049.jpg
   - images/seko/583050.jpg
   - images/seko/バッテリー修理
+  - base
+  - css/slide.css
+  - css/print.css
+  - js/openclose.js
+  - images/icon.png
+  - images/icon_menu.png
+  - images/1.jpg
+  - images/2.jpg
+  - images/3.jpg
 
 defaults:
   - scope:
       path: "google421b7cae58fe3ffa.html"
+    values:
+      sitemap: false
+  - scope:
+      path: "404.html"
     values:
       sitemap: false
