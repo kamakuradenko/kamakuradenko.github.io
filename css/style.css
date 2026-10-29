@@ -25,8 +25,6 @@
 	--header-h: 76px;
 	--font: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "BIZ UDPGothic", "Noto Sans JP", "Yu Gothic UI", Meiryo, sans-serif;
 	--check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231c2530' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E");
-	--flow-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%2324486f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 3l6 5-6 5'/%3E%3C/svg%3E");
-	--flow-arrow-down: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%2324486f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 5l5 6 5-6'/%3E%3C/svg%3E");
 	--zoom: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='6.5'/%3E%3Cpath d='M16 16l4.5 4.5M11 8v6M8 11h6'/%3E%3C/svg%3E");
 }
 
@@ -1493,15 +1491,15 @@ a.contact-main:hover {
 .steps {
 	display: grid;
 	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 12px;
 	counter-reset: step;
 }
 
 .steps li {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 10px;
+	padding: 20px 12px;
+	border: 1px solid var(--line);
+	border-radius: var(--radius-sm);
+	background: #fff;
 	font-weight: 700;
 	text-align: center;
 	counter-increment: step;
@@ -1509,30 +1507,15 @@ a.contact-main:hover {
 
 .steps li::before {
 	content: counter(step);
-	position: relative;
-	z-index: 1;
 	display: grid;
 	place-items: center;
-	width: 44px;
-	height: 44px;
+	width: 34px;
+	height: 34px;
+	margin: 0 auto 8px;
 	border-radius: 50%;
 	background: var(--navy);
 	color: #fff;
-	font-size: 16px;
-}
-
-.steps li:not(:last-child)::after {
-	content: "";
-	position: absolute;
-	z-index: 0;
-	top: 14px;
-	left: calc(50% + 30px);
-	width: calc(100% - 60px);
-	height: 16px;
-	background:
-		var(--flow-arrow) right center / 14px 14px no-repeat,
-		linear-gradient(var(--navy-soft), var(--navy-soft)) left center / calc(100% - 10px) 2px no-repeat;
-	pointer-events: none;
+	font-size: 15px;
 }
 
 .apply-actions {
@@ -1767,38 +1750,15 @@ a.contact-main:hover {
 	.cta-actions .btn {
 		width: 100%;
 	}
+
+	.steps {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
 }
 
 @media (max-width: 599px) {
 	.container {
 		padding-inline: 20px;
-	}
-
-	.steps {
-		grid-template-columns: minmax(0, 1fr);
-	}
-
-	.steps li {
-		flex-direction: row;
-		align-items: center;
-		justify-content: flex-start;
-		gap: 14px;
-		min-height: 0;
-		padding-bottom: 40px;
-	}
-
-	.steps li:last-child {
-		padding-bottom: 0;
-	}
-
-	.steps li:not(:last-child)::after {
-		top: 48px;
-		left: 14px;
-		width: 16px;
-		height: 32px;
-		background:
-			var(--flow-arrow-down) center bottom / 14px 14px no-repeat,
-			linear-gradient(var(--navy-soft), var(--navy-soft)) center top / 2px calc(100% - 12px) no-repeat;
 	}
 
 	.js .site-nav {
